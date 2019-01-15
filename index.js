@@ -1,5 +1,13 @@
 'use strict';
 
+const people = ['Kookla','Fran','Ollie'];
+const stuff = {
+  tv: 'huge',
+  radio: 'old',
+  toothbrush: 'frayed',
+  cars: ['Toyota','Mazda'],
+};
+
 let arr = [];
 
 for (let i = 0; i < 10; i++) {
@@ -40,12 +48,11 @@ function filter(arr, cb) {
   return newArr;
 }
 
-function reduce(start, arr, cb) {
-  let acc = start;
+function reduce(arr, cb, newThing) {
   for (let i= 0; i < arr.length; i++) {
-    acc += cb(start, arr[i], i, arr);
+    newThing = cb(newThing, arr[i], i, arr);
   }
-  return acc;
+  return newThing;
 }
 
 const people = ['Kookla','Fran','Ollie'];
@@ -60,5 +67,5 @@ const stuff = {
 let state = { people: [...people], ...stuff};
 
 let newPeople = [ 'Odie', ...people, 'Garfield'];
-const newStuff = { ...stuff, cars: [ ...stuff.cars, 'Mazdarati']};
-let newState = { ...state, people: ['Odie', ...state.people, 'Garfield'], stuff: [...stuff.cars, 'Masdarati']};
+const newStuff = { ...stuff, cars: [ ...stuff.cars, 'BMW']};
+let newState = { ...state, people: ['Odie', ...state.people, 'Garfield'], stuff: [...stuff.cars, 'BMW']};

@@ -10,43 +10,42 @@ const stuff = {
 };
 
 function forLoop(arr) {
-  for (let i = 0; i < arr.length; i++){
+  for(let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
   }
 }
 
 function whileLoop(arr) {
   let array = [...arr];
-  while(array.length) {
+  while( array.length ) {
     console.log(array.shift());
   }
 }
 
-function map(arr, cb) {
-  let newArr = [];
+function map(arr,cb) {
+  let newArray = [];
   for(let i = 0; i < arr.length; i++) {
-    newArr.push(cb(arr[i]));
+    newArray.push(cb(arr[i]));
   }
-  return newArr;
+  return newArray;
 }
 
-function filter(arr, cb) {
-  let newArr = [];
+function filter(arr,cb) {
+  let newArray = [];
   for(let i = 0; i < arr.length; i++) {
-    if(cb(arr[i])) {
-      newArr.push(arr[i]);
-    }
+    if ( cb(arr[i]) ) { newArray.push(arr[i]); }
   }
-  return newArr;
+  return newArray;
 }
 
 function reduce(arr, cb, newThing) {
   for(let i = 0; i < arr.length; i++) {
-    newThing = cb(newThing, arr[i], i); 
+    newThing = cb(newThing, arr[i], i);
   }
   return newThing;
 }
 
+// ---------------------------------------------------- //
 
 console.log('forLoop()');
 forLoop(numbers);

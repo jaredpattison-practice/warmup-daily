@@ -30,7 +30,7 @@ function map(arr, cb) {
   return newArray;
 }
 
-function filter(arr,cb) {
+function filter(arr, cb) {
   let newArray = [];
   for(let i = 0; i < arr.length; i++) {
     if(cb(arr[i])) {
@@ -74,9 +74,10 @@ let sum = reduce(numbers, (acc,num) => {
 },0);
 
 const state = {people, stuff};
-let newPeople = ['Odie', ...people, 'Garfield'];
-const newStuff = {...stuff, cars:[...stuff.cars, 'GM']};
-let newState = {...state, people: ['Odie', ...people, 'Garfield'], stuff:{...stuff, cars:[...stuff.cars, 'GM']}};
+let newPeople = ['Opy', ...people, 'Dopy'];
+const newStuff = {...stuff, cars:[...stuff.cars, 'Car']};
+let newState = {...state, people: ['Opy', ...people, 'Dopy'], stuff:{...stuff, cars:[...stuff.cars, 'Car']}};
+
 
 console.log({sum});
 console.log('------------------\n\n');

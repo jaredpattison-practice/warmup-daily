@@ -16,7 +16,7 @@ function forLoop(arr) {
 }
 
 function whileLoop(arr) {
-  let array =  [...arr];
+  let array = [...arr];
   while(array.length) {
     console.log(array.shift());
   }
@@ -75,8 +75,9 @@ let sum = reduce(numbers, (acc,num) => {
 
 const state = {people, stuff};
 let newPeople = ['Opie', ...people, 'Dopie'];
-const newStuff = {...stuff, cars:[...stuff.cars, 'hotrod']};
-const newState = {...state, people: ['Opie', ...people, 'Dopie'], stuff:{...stuff, cars:['hotrod']}};
+const newStuff = {...stuff, cars:[...stuff.cars, 'Mazda']};
+let newState = {...state, people: ['Opie', ...people, 'Dopie'], stuff:{...stuff, cars:[...stuff.cars, 'Mazda']}};
+
 
 console.log({sum});
 console.log('------------------\n\n');

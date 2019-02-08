@@ -1,13 +1,8 @@
 'use strict';
 
 let numbers = [1,2,3,4,5,6,7,8,9,10];
-const people = ['Kookla','Fran','Ollie'];
-const stuff = {
-  tv: 'huge',
-  radio: 'old',
-  toothbrush: 'frayed',
-  cars: ['Toyota','Mazda'],
-};
+
+// ---------------------------------------------------- //
 
 function forLoop(arr) {
   for(let i = 0; i < arr.length; i++) {
@@ -21,7 +16,6 @@ function whileLoop(arr) {
     console.log(array.shift());
   }
 }
-
 function map(arr, cb) {
   let newArray = [];
   for(let i = 0; i < arr.length; i++) {
@@ -72,15 +66,28 @@ let sum = reduce(numbers, (acc,num) => {
   acc += num;
   return acc;
 },0);
+console.log({sum});
+
+// ---------------------------------------------------- //
+
+const people = ['Kookla','Fran','Ollie'];
+const stuff = {
+  tv: 'huge',
+  radio: 'old',
+  toothbrush: 'frayed',
+  cars: ['Toyota','Mazda'],
+};
+
+// ---------------------------------------------------- //
 
 const state = {people, stuff};
 let newPeople = ['Opie', ...people, 'Dopie'];
 const newStuff = {...stuff, cars:[...stuff.cars, 'hotrod']};
 const newState = {...state, people: ['Opie', ...people, 'Dopie'], stuff:{...stuff, cars:['hotrod']}};
 
-console.log({sum});
-console.log('------------------\n\n');
+// ---------------------------------------------------- //
 
+console.log('------------------\n\n');
 
 console.log({people});
 console.log('------------------\n\n');

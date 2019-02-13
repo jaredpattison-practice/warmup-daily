@@ -81,9 +81,9 @@ const stuff = {
 // ---------------------------------------------------- //
 
 const state = {people, stuff};
-let newPeople = ['Opie', ...people, 'Dopie'];
-const newStuff = {...stuff, cars:[...stuff.cars, 'hotrod']};
-const newState = {...state, people: ['Opie', ...people, 'Dopie'], stuff:{...stuff, cars:['hotrod']}};
+let newPeople = ['Opey', ...people, 'Garfield'];
+const newStuff = {...stuff, cars:[...stuff.cars, 'car']};
+const newState = {...state, people: ['Opey', ...people, 'Garfield'], stuff:{...stuff, cars:['car']}};
 
 // ---------------------------------------------------- //
 

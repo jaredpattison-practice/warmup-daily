@@ -5,18 +5,19 @@ let numbers = [1,2,3,4,5,6,7,8,9,10];
 // ---------------------------------------------------- //
 
 function forLoop(arr) {
-  for(let i = 0; i < arr.length; i++) {
+  for(let i = 0; i <  arr.length; i++) {
     console.log(arr[i]);
   }
 }
 
-function whileLoop(arr) {
-  let array =  [...arr];
+function whileLoop(arr) { 
+  let array = [...arr];
   while(array.length) {
     console.log(array.shift());
   }
 }
-function map(arr, cb) {
+
+function map(arr,cb) {
   let newArray = [];
   for(let i = 0; i < arr.length; i++) {
     newArray.push(cb(arr[i]));
@@ -68,8 +69,6 @@ let sum = reduce(numbers, (acc,num) => {
 },0);
 console.log({sum});
 
-// ---------------------------------------------------- //
-
 const people = ['Kookla','Fran','Ollie'];
 const stuff = {
   tv: 'huge',
@@ -81,9 +80,9 @@ const stuff = {
 // ---------------------------------------------------- //
 
 const state = {people, stuff};
-let newPeople = ['Lola', ...people, 'Lilly'];
-const newStuff = {...stuff, cars:[...stuff.cars, 'truck']};
-const newState = {...state, people: ['Lola', ...people, 'Lilly'], stuff:{...stuff, cars:['truck']}};
+let newPeople = ['Loly', ...people, 'Lilly'];
+const newStuff = {...stuff, cars:[...stuff.cars, 'trucky']};
+const newState = {...state, people: ['Lolly', ...people, 'Lilly'], stuff:{...stuff, cars:['trucky']}};
 
 // ---------------------------------------------------- //
 
